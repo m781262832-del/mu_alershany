@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="project-detail">
+    <h1>{{ project.title }}</h1>
+    <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+    <p>{{ project.long_desc }}</p>
+    <a href="{{ url_for('projects') }}" class="project-btn">العودة إلى المشاريع</a>
+</section>
+{% endblock %}

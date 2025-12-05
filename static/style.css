@@ -1,0 +1,222 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f5f5f5; color: #333; line-height: 1.6; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* Navbar */
+.navbar { background-color: #2c3e50; color: white; padding: 15px 0; }
+.navbar .logo { font-size: 24px; font-weight: bold; display: inline-block; margin-left: 20px; }
+.navbar .nav-links { list-style: none; float: right; }
+.navbar .nav-links li { display: inline-block; margin-left: 20px; }
+.navbar .nav-links li a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.navbar .nav-links li a:hover, .navbar .nav-links li a.active { color: #e67e22; }
+
+/* Main content */
+main.container { padding: 30px 0; }
+
+/* Footer */
+footer { text-align: center; padding: 20px 0; background-color: #2c3e50; color: white; margin-top: 40px; }
+
+/* Flash messages */
+.flash { background-color: #2ecc71; color: white; padding: 15px; margin-bottom: 20px; border-radius: 5px; text-align: center; }
+
+/* Forms */
+form.contact-form { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+form.contact-form input, form.contact-form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+form.contact-form button { padding: 10px 20px; background-color: #e67e22; color: white; border: none; border-radius: 5px; cursor: pointer; }
+form.contact-form button:hover { background-color: #d35400; }
+
+/* Projects Grid */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+.project-card { background-color: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+.project-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
+.project-card h3 { margin-bottom: 10px; }
+.project-card p { font-size: 14px; color: #555; }
+.project-card .btn { display: inline-block; margin-top: 10px; padding: 8px 15px; background-color: #e67e22; color: white; border-radius: 5px; text-decoration: none; }
+.project-card .btn:hover { background-color: #d35400; }
+
+/* Project detail */
+.project-image { width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; }
+
+/* Headings */
+h1,h2,h3 { margin-bottom: 15px; color: #2c3e50; }
+p { margin-bottom: 15px; font-size: 16px; }
+
+/* Buttons */
+.btn { padding: 8px 15px; background-color: #e67e22; color: white; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
+.btn:hover { background-color: #d35400; }
+
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 20px;
+}
+.navbar .nav-links {
+    list-style: none;
+    float: right;
+}
+.navbar .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+    color: #e67e22;
+}
+
+.navbar {
+    position: relative;
+    z-index: 9999;
+}
+
+.nav-links a {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* حل إجباري لمشكلة تعطل روابط التنقل */
+.navbar,
+.navbar * {
+    pointer-events: auto !important;
+    z-index: 999999 !important;
+    position: relative !important;
+}
+
+body * {
+    pointer-events: auto;
+}
+.hero,
+.overlay,
+.header,
+img,
+section {
+    pointer-events: none;
+}
+/* ===== الفوتر المتحرك والمحسن ===== */
+.footer {
+    background-color: #222;   /* اللون الأسود الغامق كما كان سابقًا */
+    color: #fff;               /* النص أبيض */
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+/* نص الفوتر متحرك */
+.footer-text {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    animation: moveFooter 12s linear infinite; /* سرعة الحركة سلسة */
+}
+
+/* keyframes للحركة من اليمين لليسار */
+@keyframes moveFooter {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
+/* إضافة تأثير عند المرور على الفوتر (اختياري) */
+.footer:hover .footer-text {
+    color: #f0a500;    /* لون النص يتحول للبرتقالي عند المرور */
+    transition: color 0.3s;
+}
+
+/* ===== مشاريع ===== */
+.projects-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects-section h1 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #222;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-btn:hover {
+    background-color: #f0a500;
+}
+
+.project-detail {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-detail img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-detail p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* تصغير الصورة الأولى في المشاريع */
+.projects-container .project-card:nth-child(1) img {
+    width: 100%;   /* نسبة 80% من عرض البطاقة */
+    margin: 0 auto; /* لتوسيط الصورة */
+    display: block;
+}
+

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="projects-section">
+    <h1>المشاريع</h1>
+    <div class="projects-container">
+        {% for project in projects %}
+        <div class="project-card">
+            <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.short_desc }}</p>
+            <a href="{{ url_for('project_detail', project_id=project.id) }}" class="project-btn">التفاصيل</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

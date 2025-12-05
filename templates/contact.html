@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}تواصل معي{% endblock %}
+
+{% block content %}
+<h2>📬 تواصل معي</h2>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash">{{ messages[0] }}</div>
+  {% endif %}
+{% endwith %}
+
+<form action="/contact" method="post" class="contact-form">
+    <input type="text" name="name" placeholder="الاسم" required>
+    <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+    <textarea name="message" placeholder="اكتب رسالتك هنا ..." required></textarea>
+    <button type="submit">إرسال</button>
+</form>
+{% endblock %}
